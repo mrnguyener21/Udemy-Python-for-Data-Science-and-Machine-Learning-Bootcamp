@@ -16,3 +16,5 @@ arr /1
 np.sqrt(arr)
 # %%
 np.exp(arr)
+
+# %%
