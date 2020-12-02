@@ -42,3 +42,14 @@ df[df['W'] > 0 & (df['Y'] > 1)] #we need to the `&` symbol instead of `and `
 df[df['W'] > 0 | (df['Y'] > 1)] #this is for an `or` condition.
 # %%
 #below are ways to reset the index or setting it to something else
+
+df.reset_index() #this method will change the index back into numbers and the labels will now be in a new column labeld as "index" aka resetting the index
+# %%
+newind = ' CA NY WY OR CO'.split() #quicker way to create a list without having to type all of the commas 
+newind
+# %%
+df['States'] = newind
+df
+# %%
+df.set_index('States')#this will change the label of the index
+# %%
