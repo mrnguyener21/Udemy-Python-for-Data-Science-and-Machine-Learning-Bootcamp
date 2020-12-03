@@ -20,3 +20,7 @@ df['col1'] > 2
 df[df['col1'] > 2 &( df['col2'] == 444)] 
 
 # %%
+def times2(x):
+    return x*2
+df['col1'].apply(times2)
+# %%
