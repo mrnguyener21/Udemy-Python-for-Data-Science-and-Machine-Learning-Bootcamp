@@ -1,11 +1,8 @@
 #%%
-#import pandas as pd 
-import pandas as pd
-from pandas.core.arrays.base import ExtensionScalarOpsMixin 
-
+import pandas as pd 
 # %%
 #Read Salaries.csv as a dataframe called sal.
-salaries = pd.read_csv(r'C:\Users\vnguyen\OneDrive - Tricon Residential\Documents\Refactored_Py_DS_ML_Bootcamp-master\04-Pandas-Exercises\Salaries.csv')
+salaries = pd.read_csv('Salaries.csv')
 salaries
 # %%
 #check the head of the DataFrame
@@ -54,5 +51,16 @@ salaries['JobTitle'].value_counts().head(5)
 sum(salaries[salaries['Year'] == 2013]['JobTitle'].value_counts() == 1)
 # %%
 #how many people have the word chief in their job title?
-salaries['JobTitle'].__contains__('Chief')
+#I DONT GET THIS ONE AT ALL
+def chief_string(title):
+    if 'chief' in title.lower().split():
+        return True 
+    else:
+        return False 
+sum(salaries['JobTitle'].apply(lambda x: chief_string(x)))
+#the .APPLY(LAMBDA X is applying the if else statement to the salaries['JobTitle] so that we get our list of true and false)
+# %%
+#is there a correlation between length of the job title stirng and salary?
+salaries['title_len'] = salaries['JobTitle'].apply(len)
+salaries[['JobTitle','title_len']].corr()
 # %%
