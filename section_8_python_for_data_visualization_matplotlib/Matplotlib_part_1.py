@@ -27,4 +27,17 @@ plt.plot(y,x,'b')
 fig = plt.figure()
 axes = fig.add_axes([0.1,0.1,0.8,0.8])
 axes.plot(x,y)
+axes.set_xlabel('x label')
+axes.set_ylabel('y label')
+axes.set_title('Title')
+# %%
+fig = plt.figure()
+axes1 = fig.add_axes([0.1,0.1,0.8,0.8])
+axes2 = fig.add_axes([0.2,0.5,0.4,0.3])
+
+axes1.plot(x,y)
+axes1.set_title('larger plot')
+
+axes2.plot(y,x)
+axes2.set_title('smaller plot')
 # %%
