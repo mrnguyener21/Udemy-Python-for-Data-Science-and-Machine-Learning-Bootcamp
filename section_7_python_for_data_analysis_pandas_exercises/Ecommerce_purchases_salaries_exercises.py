@@ -40,8 +40,8 @@ ecom[ecom['Credit Card'] == 4926535242672853]['Email']
 ecom[(ecom['CC Provider'] == 'American Express') & (ecom['Purchase Price'] > 95) ].count()
 # %%
 #how many people have a credit card that expires in 2025
-#NEED TO LOOK AT SOLUTION VIDEO FOR EXPLANATION
+ecom[ecom['CC Exp Date'].apply(lambda exp: exp[3:] == '25')].count()
+
 # %%
-ecom['Email']
+ecom['Email'].apply(lambda email: email.split('@')[1])
 # %%
-#NEED TO LOOK AT SOLUTIONS VIDEO FOR EXPLANATION
