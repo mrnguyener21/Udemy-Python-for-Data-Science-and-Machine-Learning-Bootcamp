@@ -1,4 +1,5 @@
 #%%
+#this section is literally just making the graph prettier. kinda like css
 import matplotlib.pyplot as plt
 import numpy as np
 
