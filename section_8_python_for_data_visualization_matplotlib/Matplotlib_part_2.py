@@ -15,6 +15,7 @@ axes1.set_title('larger plot')
 axes2.plot(y,x)
 axes2.set_title('smaller plot')
 # %%
+#here we created two subplots that both has one row and 2 columns(not sure what that means)
 fig,axes = plt.subplots(nrows =1 , ncols =2)
 # axes.plot(x,y)
 # for current_ax in axes:
@@ -26,10 +27,11 @@ axes[1].set_title('second plot')
 
 plt.tight_layout()
 # %%
+#here we are going about changing the size of the graph(width and height)
 fig = plt.figure(figsize = (8,2))
 ax = fig.add_axes([0,0,1,1])
 ax.plot(x,y)
-# %%
+# %%#the same can be done for the smaller graphs wtihin the big graphs
 fig,axes = plt.subplots(nrows = 2, ncols = 1, figsize = (8,2))
 axes[0].plot(x,y)
 axes[1].plot(x,y)
@@ -37,6 +39,7 @@ plt.tight_layout()
 # %%
 # fig.savefig('my_picture.png',dpi = 200)
 # %%
+#here we are creating a graph with two graph lines and a legend is included
 fig = plt.figure()
 ax = fig.add_axes([0,0,1,1])
 ax.plot(x,x**2, label = 'X SQUARED')
