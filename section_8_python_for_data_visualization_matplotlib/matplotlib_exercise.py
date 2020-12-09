@@ -30,7 +30,6 @@ ax2.set_ylabel('y')
 fig = plt.figure()
 ax1 = fig.add_axes([0,0,1,1])
 ax2 = fig.add_axes([0.2,0.5,.4,.4])
-#look at solutions video to see if there a secret to knowing which combination to choose off the bat versus playing around
 ax.plot(x,z)
 ax.set_xlabel('X')
 ax.set_ylabel('Z')
@@ -45,7 +44,6 @@ ax2.set_ylim(30,50)
 
 # %%
 #ex 4
-#look at solution video for this
 fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(8,2))
 axes[0].plot(x,y,color="blue", lw=3, ls='--')
 axes[1].plot(x,z,color="red", lw=3, ls='-')
