@@ -1,50 +1,44 @@
 #%%
-#import numpy as np
+# import numpy as np
 import numpy as np 
+
 # %%
-#create an array of 10 zeros
+#create and array of 10 zeros
 np.zeros(10)
-#%%
-#create an array of 10 ones
+# %%
 np.ones(10)
 # %%
-# create an array of 10 fives
-np.ones(10)*5
+np.ones(10) * 5
 # %%
-# np.array[10:51] WRONG BELOW IS THE CORRECT METHOD
+# create an array of the integers from 10 to 50
 np.arange(10,51)
 # %%
-#Create an array of all the even integers from 10 to 50
+#create an array of the integers from 10 to 50 ( even numbers only)
 np.arange(10,51,2)
 # %%
-# Create a 3x3 matrix with values ranging from 0 to 8
-# np.matrix(0,8) THIS IS INCORRECT BELOW IS THE CORRECT METHOD
-np.arange(9).reshape(3,3)
+#create a 3x3 matrix with values ranging from 0 to 8
+np.arange(0,9).reshape(3,3)
 # %%
-#createa a 3x3 identity matrix
-#COMPLETELY FORGOT WHAT AN IDENTITY MATRIX IS
+#create a 3x3 identity matrix GOT THIS WRONG
 np.eye(3)
 # %%
-# np.random(0,1) THIS IS INCORRECT BELOW IS THE CORRECT METHOD
+#use numpy to generate a random number between 0 and 1 GOT THIS WRONG
 np.random.rand(1)
 # %%
-# np.arange(25).rand() THIS IS INCORRECT BELOW IS THE CORRECT METHOD
-np.random.randn(25)
+#Use NumPy to generate an array of 25 random numbers sampled from a standard normal distribution GOT THIS WRONG
+np.random.rand(25)
 # %%
-# np.arange(0,1)/100 THIS IS INCORRECT BELOW IS THE CORRECT METHOD 
-np.arange(1,101).reshape(10,10)/100
+#GOT THIS WRONG FORGOT TO RESHAPE IT TO TURN IT INTO A MATRIX RATHER THAN AN ARRAY
+np.arange(0,101)/100
 # %%
-# Create an array of 20 linearly spaced points between 0 and 1:
-#I DONT REMEMBER HOW TO DO LINEARLY SPACED POINTS
+#create an array of 20 linearly spaced points between 0 and 1
+#forgot to specify the last argument to have specifically 20 within the array
 np.linspace(0,1,20)
-
 # %%
 mat = np.arange(1,26).reshape(5,5)
 mat
 # %%
-# mat[13:] THIS IS INCORRECT GO WATCH THE SOLUTIONS VIDEO FOR THIS
-mat[2:,1:]
+mat[3:,2:]
 # %%
-# mat[0:3,1] THIS IS INCORRECT LOOKAT VIDEO EXPLANATION FOR THIS
-mat[:3,1:2]
+mat[2:,1:]
 # %%
