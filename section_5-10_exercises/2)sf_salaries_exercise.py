@@ -39,4 +39,3 @@ sal['JobTitle'].value_counts().head(5)
 # %%
 #how many job titles were represented by only one person in 2013?
 sum(sal[sal['Year'] == 2013]['JobTitle'].value_counts() == 1)
-
